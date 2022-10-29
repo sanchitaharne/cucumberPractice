@@ -5,15 +5,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.cucumber.learning.RestaurantMenu;
 import org.cucumber.learning.RestaurantMenuItem;
-
-import javax.sound.midi.Soundbank;
-
 public class MenuManagementSteps {
 
     RestaurantMenuItem newMenuItem;
     RestaurantMenu locationMenu = new RestaurantMenu();
-    @Given("I have a new menu item by name {string} and price {int}")
-    public void i_have_a_new_menu_item_by_name_and_price(String itemName, Integer price) {
+    @Given("^I have a new menu item by name \"([^\"]*)\" and price ([$]*)([\\d]+)$")
+    public void i_have_a_new_menu_item_by_name_and_price(String itemName, String currencyType, Integer price) {
         newMenuItem = new RestaurantMenuItem(itemName, itemName, price);
         System.out.println("step 1");
     }
