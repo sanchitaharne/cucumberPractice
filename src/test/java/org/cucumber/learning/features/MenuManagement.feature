@@ -23,4 +23,4 @@ Feature: Menu Management
   Scenario: Add another menu item
     Given I have a new menu item by name "Chicken Sandwich" and price $10
     When I add that menu item
-    Then New item "Chicken Sandwich" is added
+    Then I should see an error message with value "Duplicate Item"
