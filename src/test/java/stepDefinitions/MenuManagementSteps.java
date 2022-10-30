@@ -19,10 +19,12 @@ public class MenuManagementSteps {
         locationMenu.add(newMenuItem);
         System.out.println("step 2");
     }
-    @Then("New item in added")
-    public void new_item_in_added() {
-       locationMenu.isExist(newMenuItem);
+
+    @Then("New item {string} is added")
+    public void new_item_in_added(String string) {
+        locationMenu.isExist(newMenuItem);
         System.out.println("step 3");
     }
+
 
 }

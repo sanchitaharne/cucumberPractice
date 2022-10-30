@@ -8,8 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/java/org/cucumber/learning/features",
         glue = "stepDefinitions",
-        plugin = {"pretty"},
-        tags = "@SmokeTest and @RegularTest"
+        plugin = {"pretty"}
 )
 public class MenuManagementTest {
 }

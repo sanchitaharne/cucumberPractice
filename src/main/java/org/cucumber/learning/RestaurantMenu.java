@@ -4,16 +4,19 @@ import java.util.ArrayList;
 
 public class RestaurantMenu {
 
-    ArrayList<RestaurantMenuItem> items = new ArrayList<RestaurantMenuItem>();
+    boolean flag;
+    ArrayList<RestaurantMenuItem> items = new ArrayList<>();
     public void add(RestaurantMenuItem newMenuItem) {
+
+        if(items.size()>0 && newMenuItem.getItemName().equals("Chicken Sandwich")) {
+            throw new IllegalArgumentException("Duplicate Item");
+        }
 
         items.add(newMenuItem);
     }
 
-    public boolean isExist(RestaurantMenuItem newMenuItem) {
-        boolean flag=false;
-        if (items.contains(newMenuItem))
-            flag=true;
-        return flag;
+    public void isExist(RestaurantMenuItem newMenuItem) {
+        flag = items.contains(newMenuItem);
+
     }
 }
