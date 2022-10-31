@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/java/org/cucumber/learning/features",
         glue = {"stepDefinitions","hooks"},
         plugin = {"pretty",
-                   "html:target/SystemReports/html",
+                   "html:target/SystemReports/html/report.html",
                     "json:target/SystemReports/json/report.json",
                     "junit:target/SystemReports/junit/report.xml"}
 )
