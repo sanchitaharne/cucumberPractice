@@ -10,13 +10,18 @@ public class DataTableSteps {
 
     @Given("I placed an order for the following items")
     public void i_placed_an_order_for_the_following_items(io.cucumber.datatable.DataTable dataTable) {
-       /* List<List<String>> billItems = dataTable.asLists(String.class);
+        List<List<String>> billItems = dataTable.asLists(String.class);
         for (List<String> billItem: billItems)
-            System.out.println(billItem);*/
-
-        List<String> billItems = dataTable.row(0);
-        for (String billItem: billItems)
             System.out.println(billItem);
+
+/*        for (List<String> billItem: billItems) {
+         for(String s:billItem) {
+             System.out.println(billItem);
+         }
+        }*/
+      /*  List<String> billItems = dataTable.row(0);
+        for (String billItem: billItems)
+            System.out.println(billItem);*/
     }
     @When("I generate the bill")
     public void i_generate_the_bill() {

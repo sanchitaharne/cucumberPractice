@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/java/org/cucumber/learning/features",
         glue = {"stepDefinitions","hooks"},
-        tags = "@listofstrings",
+        tags = "@listoflistofstrings",
         plugin = {"pretty",
                 "html:target/SystemReports/html/report.html",
                 "json:target/SystemReports/json/report.json",
