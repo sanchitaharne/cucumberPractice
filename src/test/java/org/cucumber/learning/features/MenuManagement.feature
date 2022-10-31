@@ -1,4 +1,3 @@
-@SmokeTest
 Feature: Menu Management
 
 
