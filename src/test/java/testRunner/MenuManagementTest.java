@@ -8,10 +8,14 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/java/org/cucumber/learning/features",
         glue = {"stepDefinitions","hooks"},
+        tags = "@listofstrings",
         plugin = {"pretty",
-                   "html:target/SystemReports/html/report.html",
-                    "json:target/SystemReports/json/report.json",
-                    "junit:target/SystemReports/junit/report.xml"}
+                "html:target/SystemReports/html/report.html",
+                "json:target/SystemReports/json/report.json",
+                "junit:target/SystemReports/junit/report.xml"
+                },
+        dryRun = false,
+        monochrome = true
 )
 public class MenuManagementTest {
 }
