@@ -2,7 +2,13 @@ package stepDefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.cucumber.learning.BillCalculationHelper;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chromium.ChromiumDriver;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -30,5 +36,15 @@ public class ScenarioOutlineSteps {
         System.out.println("Expected Value "+expectedValue);
         System.out.println("System Calculated "+finalBill);
         assertEquals(expectedValue, finalBill, 0.0);
+        invokeWebPage();
     }
+
+    private void invokeWebPage(){
+        WebDriverManager.chromedriver().setup();
+        ChromeDriver driver = new ChromeDriver();
+        driver.get("https://www.google.com");
+
+    }
+
+
 }
